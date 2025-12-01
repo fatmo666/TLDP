@@ -1,11 +1,18 @@
 # Usage
-## Datasets: mnist|cifar10|svhn
-python train_{scenario}.py --config ./conf/scenario1/{dataset_name}.yaml
 
-python train_{scenario}.py --config ./conf/scenario1/{dataset_name}.yaml
+## Setup
+```bash
+conda env create -f environment.yml
+conda activate federated_learning
 
-python train_{scenario}.py --config ./conf/scenario1/{dataset_name}.yaml
-## Dataset: imdb
+## Training
+### 1. Vision Datasets (MNIST, CIFAR-10, SVHN)
+Run the training script with the corresponding configuration file.
+Replace {scenario} and {dataset_name}.
+python train_{scenario}.py --config ./conf/{scenario}/{dataset_name}.yaml
+
+### 2. NLP Dataset (IMDB)
 python imdb_{scenario}.py
-## Dataset: DarkNet
+
+### 3. DarkNet
 python darknet_{scenario}.py
